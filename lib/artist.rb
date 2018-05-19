@@ -29,7 +29,7 @@ class Artist
   end
 
   def add_song(song)
-    songs.push(song)
+    @songs.push(song)
   end
 
   def save

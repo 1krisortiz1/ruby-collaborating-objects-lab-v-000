@@ -15,10 +15,12 @@ class Artist
 
   def self.find_or_create_by_name(name)
     self.find_by_name(name) || self.create_by_name(name)
-    artist.name == name
+    
   end
 
   def self.find_by_name(name)
+    @@all.detect do |artist|
+      artist.name == name
   end
 
   def self.create_by_name(name)
@@ -32,3 +34,4 @@ class Artist
     @@all << self
   end
 end
+

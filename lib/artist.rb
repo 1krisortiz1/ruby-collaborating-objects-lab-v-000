@@ -25,7 +25,7 @@ class Artist
   end
 
   def self.create_by_name(name)
-  artist = self.new(name).save
+    self.new(name).save
   end
 
   def add_song(song)

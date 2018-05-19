@@ -4,12 +4,11 @@ class Song
   def initialize(name)
     @name = name
     @artist = nil
-
   end
 
   def artist=(artist)
     @artist = artist
-    artist.add_song(self) 
+    artist.add_song(self) unless artist.songs.include?(self)
 
   end
 end

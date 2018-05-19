@@ -6,7 +6,8 @@ class MP3Importer
   end
 
   def files
-    Dir.entries(path).reject{|entry| entry == "." || entry == ".."}
+    Dir.entries(path).reject{|entry| entry == "." || entry == ".."} 
+    # "." references the current directory & ".." references the parent directory
   end
 
   def import

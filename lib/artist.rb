@@ -25,7 +25,7 @@ class Artist
   end
 
   def self.create_by_name(name)
-  artis = self.new(name)
+  artis = self.new(name).save
   end
 
   def add_song(song)
@@ -34,7 +34,8 @@ class Artist
   end
 
   def save
-    @@all << self
+    @@all.push(self)
+    self
   end
 
   def print_songs
